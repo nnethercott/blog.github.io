@@ -1,3 +1,1 @@
-Copyright (c) 2024–2025 Aashvik Tyagi
-
-This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The content of this site is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/), while code is under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.html).
