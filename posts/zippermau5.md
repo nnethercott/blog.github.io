@@ -7,7 +7,7 @@ cats: rb gem
 ---
 # zippermau5, micromouse robot
 
-![software view of micromouse pcb](./pcb.png)
+![software view of micromouse pcb](./pcb.png "(note: UKMARS micromouse symbol used with special permission)")
 
 ## About
 _ZIPPERMAU5_ is a [micromouse](https://en.wikipedia.org/wiki/micromouse) robot that I'm currently working on, and have been since around june of this year. Check out [the zippermau5 github](https://github.com/aashvikt/zippermau5)!
