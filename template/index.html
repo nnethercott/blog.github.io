@@ -23,8 +23,10 @@
     &:has(#dark:checked) { color-scheme: dark; }
 }
 *, *::before, *::after { box-sizing: border-box; }
+input[name=theme] { position: absolute; opacity: 0; }
+input[name=theme]+label { cursor: pointer; }
+input[name=theme]:focus+label { outline: 1px solid; }
 input[name=theme]:checked+label { text-decoration: underline; }
-label[for=light], label[for=dark] { cursor: pointer; }
 body { font: 14px "DejaVu Sans", sans-serif; hyphens: auto; overflow-wrap: break-word; color: var(--fg); background: var(--bg); width: fit-content; max-width: min(70ch, 100%); margin: 0 auto; padding: 0 1ch; }
 a { color: var(--a); }
 a.anchor { text-decoration: none; }
@@ -78,8 +80,8 @@ article[post][misc] a, span[misc] { color: light-dark(#555, #777); }</style>
             <a href="https://mastodon.social/@aashvik" rel="me">fedi</a>,
             <a href="https://discord.com/users/828870867424378921">discord</a>,
             <a href="mailto:aashvik&#64;aashvik.com">mail</a> ·
-            <input type=radio id=light name=theme hidden> <label for=light title="light mode">☼</label> /
-            <input type=radio id=dark name=theme hidden> <label for=dark title="dark mode">☾</label>
+            <input type=radio id=light name=theme aria-label="light mode"> <label for=light title="light mode">☼</label> /
+            <input type=radio id=dark name=theme aria-label="dark mode"> <label for=dark title="dark mode">☾</label>
         </p></nav></header>
         <main>${post_content}</main>
         <footer><nav><p>
