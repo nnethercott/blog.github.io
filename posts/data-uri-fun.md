@@ -3,7 +3,7 @@ date: 2025-11-11
 title: data uris are pretty cool
 desc: a little bit about data uris
 tags: sw web
-cats: sw draft
+cats: sw gem draft
 ---
 # data uri
 

@@ -81,7 +81,7 @@ envsubst < template/index.html > "${post_dir}/index.html"
 
     article="\
 <article post ${post_cats} id='${post_slug}'>
-    <time datetime='${post_date}'>${post_date}</time>
+    <time ${post_cats} datetime='${post_date}'>${post_date}</time>
     <a href='/posts/${post_slug}' title='${post_desc} [${post_tags_comma}] [${post_date%??????}]'>${post_title}</a>
 </article>"
 
@@ -139,30 +139,28 @@ post_tags_comma="tags, categories" \
 post_content="<h1>tags</h1><nav>${tags_page%<br>}</nav>" \
 envsubst < template/index.html > "public/tags/index.html"
 
+navline="<nav><p>View <span sw>software</span>, <span hw>hardware</span>, <span rb>robotics</span>, <span misc>miscellaneous</span>,"
+
 post_title=aashvik \
 post_desc="computers, robotics, and more" \
 post_tags_comma="index, home, landing, blog" \
-post_content="<p>
-    View <span sw>software</span>,
-    <span hw>hardware</span>,
-    <span rb>robotics</span>,
-    <span misc>miscellaneous</span>,
-    or <a href=/drafts>drafts</a>.
-</p>
+post_content="${navline} or <a href=/drafts>drafts</a>.</p></nav>
 <nav>${index}</nav>" \
 envsubst < template/index.html > public/index.html
-
-date_8601=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
-items_atom="${atom#
-}" \
-envsubst < template/atom.xml > public/atom.xml
 
 mkdir -p public/drafts/
 post_title=drafts \
 post_desc="drafts and unindexed posts" \
 post_tags_comma="drafts, posts, wip" \
-post_content="<h1>drafts</h1><nav>${drafts}</nav>" \
+post_content="<h1>drafts</h1>
+${navline} or go back to <a href=/>posts</a>.</p></nav>
+<nav>${drafts}</nav>" \
 envsubst < template/index.html > "public/drafts/index.html"
+
+date_8601=$(date -u +%Y-%m-%dT%H:%M:%SZ) \
+items_atom="${atom#
+}" \
+envsubst < template/atom.xml > public/atom.xml
 
 mkdir public/gen.sh
 post_title="gen.sh"    \

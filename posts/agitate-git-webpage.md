@@ -3,9 +3,12 @@ date: 2025-12-17
 title: my posix shell static git webpage generator
 desc: gitto!
 tags: sw web
-cats: sw draft
+cats: sw gem draft
 ---
-# gitto
+# agitate
+
+> [!warning]
+> it's called agitate actually. coming soon ^TM^
 
 ...
 
@@ -14,6 +17,11 @@ posix shell
 takes in URLs to .gits
 
 curls them
+
+> takes in .git urls and curls them
+
+> [!warning]
+> well that was a lie
 
 and uh
 

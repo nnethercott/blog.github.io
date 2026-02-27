@@ -19,8 +19,8 @@
     --t: light-dark(#0072ff54, #3a72e899);
     --cbg: light-dark(#ddd, #333);
     --m: light-dark(#555, #aaa);
-    &:has(#light:checked) { color-scheme: light; }
-    &:has(#dark:checked) { color-scheme: dark; }
+    &:has(#light:checked) { color-scheme: light; };
+    &:has(#dark:checked) { color-scheme: dark; };
 }
 *, *::before, *::after { box-sizing: border-box; }
 input[name=theme] { position: absolute; opacity: 0; }
@@ -66,7 +66,13 @@ article[post][gem] time, time[gem], :target, a[data-wikilink="true"] { backgroun
 article[post][sw] a, span[sw] { color: light-dark(blue, #0978db); }
 article[post][hw] a, span[hw] { color: light-dark(green, #1daf3d); }
 article[post][rb] a, span[rb] { color: light-dark(red, #dd1a34); }
-article[post][misc] a, span[misc] { color: light-dark(#555, #777); }</style>
+article[post][misc] a, span[misc] { color: light-dark(#555, #777); }
+main {
+    &:has(span[sw]:is(:hover, :focus, :active, :focus-within)) { article[post][sw] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[hw]:is(:hover, :focus, :active, :focus-within)) { article[post][hw] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[rb]:is(:hover, :focus, :active, :focus-within)) { article[post][rb] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[misc]:is(:hover, :focus, :active, :focus-within)) { article[post][misc] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+}</style>
         ${head_extension}
     </head>
     <body>
