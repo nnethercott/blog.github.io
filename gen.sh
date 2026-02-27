@@ -39,7 +39,7 @@ for md in $(
     post_tags_comma="$(echo "$post_tags" | sed 's/[[:space:]]\+/, /g')"
 
     mkdir -p $post_dir
-    export post_title post_desc post_tags
+    export post_title post_desc post_tags_comma
     post_content="\
 <p>
     <small>
@@ -82,7 +82,7 @@ envsubst < template/index.html > "${post_dir}/index.html"
     article="\
 <article post ${post_cats} id='${post_slug}'>
     <time datetime='${post_date}'>${post_date}</time>
-    <a href='/posts/${post_slug}' title='${post_desc} [${post_tags}] [${post_date%??????}]'>${post_title}</a>
+    <a href='/posts/${post_slug}' title='${post_desc} [${post_tags_comma}] [${post_date%??????}]'>${post_title}</a>
 </article>"
 
     echo "$post_cats" | grep -q draft && drafts="${drafts}${article}" && continue
