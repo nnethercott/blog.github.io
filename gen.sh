@@ -34,8 +34,8 @@ for md in $(
     post_date=$(sed -nE "${metalines}s/^date${colsep}(.*)/\1/p" "$md" | sed 's/[$"'"'"']//g')
     post_title="$(fix_xml "$(sed -nE "${metalines}s/^title${colsep}(.*)/\1/p" "$md")")"
     post_desc="$(fix_xml "$(sed -nE "${metalines}s/^desc(ription)?${colsep}(.*)/\2/p" "$md")")"
-    post_tags=$(sed -nE "${metalines}s/^tag(s)?${colsep}(.*)/\2/p" "$md" | sed 's/[$"'"'"']//g')
-    post_cats=$(sed -nE "${metalines}s/^cat(egor)?(y)?(ie)?(s)?${colsep}(.*)/\5/p" "$md" | sed 's/[$"'"'"']//g')
+    post_tags="$(sed -nE "${metalines}s/^tag(s)?${colsep}(.*)/\2/p" "$md" | sed 's/[$"'"'"']//g')"
+    post_cats="$(sed -nE "${metalines}s/^cat(egor)?(y)?(ie)?(s)?${colsep}(.*)/\5/p" "$md" | sed 's/[$"'"'"']//g')"
 
     post_tags_comma="$(echo "$post_tags" | sed 's/[[:space:]]\+/, /g')"
 
@@ -154,7 +154,7 @@ post_title=drafts \
 post_desc="drafts and unindexed posts" \
 post_tags_comma="drafts, posts, wip" \
 post_content="<h1>drafts</h1>
-${navline} or go back to <a href=/>posts</a>.</p></nav>
+${navline} or <a href=/>published</a>.</p></nav>
 <nav>${drafts}</nav>" \
 envsubst < template/index.html > "public/drafts/index.html"
 
