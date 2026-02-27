@@ -9,6 +9,9 @@
         <meta name="description" content="${post_desc}">
         <meta name="keywords" content="${post_tags_comma}">
         <meta name="generator" content="https://aashvik.com/gen.sh">
+        <meta property="og:description" content="${post_desc}">
+        <!-- cc0 from https://pxhere.com/en/photo/748385 : -->
+        <meta property="og:image" content="https://c.pxhere.com/photos/d4/9d/cat_basket_feel_at_home_cozy_hidden-748385.jpg!d">
         <link rel="icon" type="image/png" title="favicon" href="/favicon.png">
         <link rel="alternate" type="application/atom+xml" title="atom feed" href="/atom.xml">
         <style>:root {
@@ -62,16 +65,16 @@ dd::before, figcaption::before { content: "└─"; margin-right: 0.5ch; }
 section[data-footnotes].footnotes ol li p {margin: 1ch}
 article[post] { display: flex; align-items: baseline; }
 article[post] time { font-size: smaller; white-space: nowrap; margin-right: 1ch; }
-article[post][gem] time, time[gem], :target, a[data-wikilink="true"] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; }
+article[post][gem] time, time[gem], :target, a[data-wikilink="true"], a:is(:hover, :focus, :active, :focus-within) { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; }
 article[post][sw] a, span[sw] { color: light-dark(blue, #0978db); }
 article[post][hw] a, span[hw] { color: light-dark(green, #1daf3d); }
 article[post][rb] a, span[rb] { color: light-dark(red, #dd1a34); }
 article[post][misc] a, span[misc] { color: light-dark(#555, #777); }
 main {
-    &:has(span[sw]:is(:hover, :focus, :active, :focus-within)) { article[post][sw] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
-    &:has(span[hw]:is(:hover, :focus, :active, :focus-within)) { article[post][hw] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
-    &:has(span[rb]:is(:hover, :focus, :active, :focus-within)) { article[post][rb] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
-    &:has(span[misc]:is(:hover, :focus, :active, :focus-within)) { article[post][misc] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[sw]:is(:hover, :focus, :active, :focus-within)) { article[post][sw], span[sw] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[hw]:is(:hover, :focus, :active, :focus-within)) { article[post][hw], span[hw] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[rb]:is(:hover, :focus, :active, :focus-within)) { article[post][rb], span[rb] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
+    &:has(span[misc]:is(:hover, :focus, :active, :focus-within)) { article[post][misc], span[misc] { background: radial-gradient(var(--t), transparent); text-shadow: var(--bg) 0 0 1ch; } };
 }</style>
         ${head_extension}
     </head>

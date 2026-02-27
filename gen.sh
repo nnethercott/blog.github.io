@@ -30,6 +30,7 @@ for md in $(
 
     metalines="$(awk '/^---$/ {if (s==0) {s=NR; next} else {e=NR; print s+1 "," e-1; exit}}' "$md")"
     colsep="[[:space:]]*:[[:space:]]*"
+
     post_date=$(sed -nE "${metalines}s/^date${colsep}(.*)/\1/p" "$md" | sed 's/[$"'"'"']//g')
     post_title="$(fix_xml "$(sed -nE "${metalines}s/^title${colsep}(.*)/\1/p" "$md")")"
     post_desc="$(fix_xml "$(sed -nE "${metalines}s/^desc(ription)?${colsep}(.*)/\2/p" "$md")")"
@@ -45,7 +46,7 @@ for md in $(
     <small>
         <a href='/posts/${post_slug}.md' title='view markdown'>View soure</a> for \"${post_title}\"
         [<span ${post_cats}>${post_cats}</span>]
-        from <a href='/#${post_slug}'><time ${post_cats} datetime='${post_date}'>${post_date}</time></a>
+        from <a href='/$(echo "$post_cats" | grep -q draft && echo "drafts")#${post_slug}'><time ${post_cats} datetime='${post_date}'>${post_date}</time></a>
         in $(echo "$post_tags" | sed -E "s/([^ ]+)/<a href='\/tags#\1'\>\1<\/a>, /g" | sed 's/, $//').
         <br><i>${post_desc}</i>
     </small>
