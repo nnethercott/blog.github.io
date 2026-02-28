@@ -14,5 +14,5 @@
     <icon>/favicon.png</icon><logo>/favicon.png</logo>
     <rights>© ash CC BY-NC-SA content, GPL code</rights>
     <subtitle>computers, robotics, and more</subtitle>
-    ${items_atom}
+${items_atom}
 </feed>

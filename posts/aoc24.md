@@ -4,6 +4,7 @@ title: advent of code 2024
 desc: I did this year's Advent of Code. I enjoyed it.
 tags: aoc sw
 cats: sw
+img: /assets/aoc24/calendar.avif
 ---
 # Advent of Code 2024
 ![aoc calendar](./calendar.avif)

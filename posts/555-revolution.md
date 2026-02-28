@@ -4,6 +4,7 @@ title: doin' it all with 555s
 desc: For April First, a guide to replace everything with 555 ICs.
 tags: analog humor
 cats: hw gem
+img: /assets/555-revolution/555.avif
 ---
 # Doin' It With A 555: One Chip to Rule Them All
 ![555 IC](./555.avif "The venerable 555 IC (Swift.Hg, Wikimedia Commons)")

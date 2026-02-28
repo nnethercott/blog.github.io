@@ -4,6 +4,7 @@ title: rfgy24: the tryhard's trap
 desc: A competition I recently participated in for which I didn't see the easy way.
 tags: robotics comp 3dp
 cats: rb
+img: /assets/rfgy24/meerkat.avif
 ---
 # Simple Robotics Competition Traps Tryhard
 

@@ -4,6 +4,7 @@ title: qlock: a max7219 led desk clock
 desc: About a 3d-printed RTC and LED matrix desk clock I made.
 tags: hw led-matrix rtc 3dp
 cats: hw
+img: /assets/qlock/cad.avif
 ---
 # Qlock
 

@@ -4,6 +4,7 @@ title: mazebeetle: an attempt to micromouse
 desc: About an initial small and heavy maze-solving robot I made.
 tags: robotics micromouse 3dp
 cats: rb
+img: /assets/mazebeetle/front.avif
 ---
 # MazeBeetle: An Attempt to Micromouse
 

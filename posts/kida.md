@@ -4,6 +4,7 @@ title: kida: to make a quadruped
 desc: A post about a janky robotic insect I made.
 tags: robotics insect quadruped
 cats: rb gem
+img: /assets/kida/kida.avif
 ---
 # Killer Insect Droid Automation, or KIDA
 

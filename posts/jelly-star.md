@@ -4,6 +4,7 @@ title: jelly star and the universal android debloater
 desc: I experience, review, and debloat my new Unihertz Jelly Star, the world's smallest Android 13 smartphone.
 tags: phone
 cats: misc
+image: /assets/jelly-star/side-back-front.avif
 ---
 # My phone
 Since October 19th of this year, I've been using the [Jelly Star](https://www.unihertz.com/products/jelly-star), a small bean-shaped piece of plastic that happens to be the smallest smartphone that runs Android 13.
