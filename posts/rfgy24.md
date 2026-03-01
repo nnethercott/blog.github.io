@@ -106,7 +106,7 @@ I wasn't convinced. Scared, I panicked and changed it back to the random code. P
 
 ## out
 
-![IQ bell curve meme](./bell-curve.avif "Wisdom is knowing when to build the bulldozer and when to build the fancy system")
+<!-- ![IQ bell curve meme](./bell-curve.avif "Wisdom is knowing when to build the bulldozer and when to build the fancy system") -->
 
 I really remember how hard it hit on finals day. A blind robot with a path made well once would simply have had no room for error, even all exact block coordinates had already been given.
 

@@ -30,8 +30,8 @@ for md in $(
     post_dir=${md%.md}
     post_slug=${post_dir#public/posts/}
 
-    # TODO: make post_image absolute (from /) and add ash.com/asset/... regex (from ./)
-    # TODO: outline/schema/TOC-maker for select webpages and all feed elements
+    # TOD: make post_image absolute (from /) and add ash.com/asset/... regex (from ./)
+    # TOD: outline/schema/TOC-maker for select webpages and all feed elements
 
     metalines="$(awk '/^---$/ {if (s==0) {s=NR; next} else {e=NR; print s+1 "," e-1; exit}}' "$md")"
     colsep="[[:space:]]*:[[:space:]]*"
@@ -65,7 +65,7 @@ $(
         --front-matter-delimiter --- \
         --relaxed-autolinks \
         --header-ids '' \
-        --syntax-highlighting base16-eighties.dark \
+        --syntax-highlighting none \
         --extension alerts,autolink,description-lists,footnotes,greentext,math-code,math-dollars,multiline-block-quotes,spoiler,strikethrough,subscript,superscript,table,tasklist,underline,wikilinks-title-before-pipe \
         ${md} \
     | sed -z -E '
@@ -187,7 +187,7 @@ mkdir public/gen.sh
 post_title="gen.sh"    \
 post_desc="static site generator" \
 post_tags_comma="generator, script, ssg" \
-post_content="$(printf '# gen.sh\n```sh\n%s\n```' "$(cat gen.sh)" | comrak)" \
+post_content="$(printf '# gen.sh\n```sh\n%s\n```' "$(cat gen.sh)" | comrak --syntax-highlighting none)" \
 head_extension="<style>body { max-width: 100% }</style>" \
 envsubst < template/index.html > public/gen.sh/index.html
 

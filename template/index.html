@@ -19,7 +19,7 @@
     --bg: light-dark(#fafafa, #121212);
     --a: light-dark(#0050b3, #4da3ff);
     --t: light-dark(#0072ff54, #3a72e899);
-    --cbg: light-dark(#ddd, #333);
+    --cbg: light-dark(#ddd, #222);
     --m: light-dark(#555, #aaa);
     &:has(#light:checked) { color-scheme: light; };
     &:has(#dark:checked) { color-scheme: dark; };
@@ -32,13 +32,11 @@ input[name=theme]:checked+label { text-decoration: underline; }
 body { font: 14px "DejaVu Sans", sans-serif; hyphens: auto; overflow-wrap: break-word; color: var(--fg); background: var(--bg); width: fit-content; max-width: min(70ch, 100%); margin: 0 auto; padding: 0 1ch; }
 a { color: var(--a); }
 a.anchor { text-decoration: none; }
-main :not(h1:first-of-type) > a.anchor::before { content: "#"; margin-right: 0.5ch; }
-pre, code, span[data-math-style] { font-family: monospace; }
-:not(pre)>code, span[data-math-style] { background-color: var(--cbg); word-wrap: break-word; }
-img, video, audio, iframe, pre, table, figure { width: fit-content; max-width: 100%; padding: 1ch 0; overflow-x: auto; margin: 0px auto; display: block; }
-pre { box-sizing: border-box; padding: 1ch; color: lightgray; background: #1d2021 !important; }
+main :not(h1:first-of-type) > a.anchor::before { content: "§"; margin-right: 0.5ch; }
+pre, code, span[data-math-style] { font-family: monospace; background-color: var(--cbg); word-wrap: break-word; }
+img, video, audio, iframe, pre, table, figure { width: fit-content; max-width: 100%; overflow-x: auto; margin: 0px auto; display: block; }
 figure { display: table; align-self: flex-start; }
-figcaption { color: var(--m); display: table-caption; caption-side: bottom; margin-top: -1ch; margin-bottom: 1ch; }
+figcaption { color: var(--m); display: table-caption; caption-side: bottom; margin-top: 1ch; }
 table { border-collapse: collapse; }
 tr>:not(:last-child) { padding-right: 1ch; border-right: 1px solid var(--fg); }
 tr>:not(:first-child) { padding-left: 1ch; }
