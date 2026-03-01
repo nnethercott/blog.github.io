@@ -167,7 +167,7 @@ s@(<(img|a)[^>]*[[:space:]](src|href)=[\"'\'']?)\.@\1/assets/'"$post_slug"'@g
 
 ### "Wow, that's a lot of non-standard markdown functionality!"
 
-I agree! I wrote the `draft` post [`/posts/cmrk-cheatsheet`](/posts/cmrk-cheatsheet.md) as a reference for the first few times I'd use these structures, and also to tune this site's CSS.
+I agree! I wrote the `draft` post [`/posts/cmrk-cheatsheet`](/posts/cmrk-cheatsheet) as a reference for the first few times I'd use these structures, and also to tune this site's CSS.
 
 ### building the post
 
