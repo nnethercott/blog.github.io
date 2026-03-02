@@ -28,20 +28,19 @@ for md in $(
 ); do
 
     post_dir=${md%.md}
-    post_slug=${post_dir#public/posts/}
+    post_slug="$(echo ${post_dir#public/posts/} | sed 's/[$"'"'"']//g')"
 
-    # TOD: make post_image absolute (from /) and add ash.com/asset/... regex (from ./)
     # TOD: outline/schema/TOC-maker for select webpages and all feed elements
 
     metalines="$(awk '/^---$/ {if (s==0) {s=NR; next} else {e=NR; print s+1 "," e-1; exit}}' "$md")"
     colsep="[[:space:]]*:[[:space:]]*"
 
-    post_date=$(sed -nE "${metalines}s/^date${colsep}(.*)/\1/p" "$md" | sed 's/[$"'"'"']//g')
+    post_date=$(sed -nE "${metalines}s/^date${colsep}(.*)/\1/p" "$md")
     post_title="$(fix_xml "$(sed -nE "${metalines}s/^title${colsep}(.*)/\1/p" "$md")")"
     post_desc="$(fix_xml "$(sed -nE "${metalines}s/^desc(ription)?${colsep}(.*)/\2/p" "$md")")"
     post_tags="$(sed -nE "${metalines}s/^tag(s)?${colsep}(.*)/\2/p" "$md" | sed 's/[$"'"'"']//g')"
-    post_cats="$(sed -nE "${metalines}s/^cat(egor)?(y)?(ie)?(s)?${colsep}(.*)/\5/p" "$md" | sed 's/[$"'"'"']//g')"
-    post_image="$(sed -nE "${metalines}s/^im(a)?g(e)?${colsep}(.*)/\3/p" "$md" | sed 's/[$"'"'"']//g')"
+    post_cats="$(sed -nE "${metalines}s/^cat(egor)?(y)?(ie)?(s)?${colsep}(.*)/\5/p" "$md")"
+    post_image="$(sed -nE "${metalines}s/^im(a)?g(e)?${colsep}(.*)/\3/p" "$md" | sed "s|^/|https://aashvik.com/|; s|^\./|https://aashvik.com/assets/${post_slug}/|")"
 
     post_tags_comma="$(echo "$post_tags" | sed 's/[[:space:]]\+/, /g')"
 

@@ -4,7 +4,7 @@ title: lm386 noodling: fart synth
 desc: While messing around with an LM386 audio amplifier, I made a fart synthesizer.
 tags: lm386 analog synth audio
 cats: hw
-img: /assets/fart-386/board.avif
+img: ./board.avif
 ---
 # LM386 "Opinionated" Synth
 ![breadboard circuit with analog components](./board.avif)

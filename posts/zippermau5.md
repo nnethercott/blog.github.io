@@ -4,7 +4,7 @@ title: zippermau5, my micromouse
 desc: A post about ZIPPERMAU5, a WIP micromouse robot using a custom pcb, teensy 4.1, brushed dc motors, and time-of-flight sensors.
 tags: micromouse robotics pcb
 cats: rb gem
-img: /assets/zippermau5/front.png
+img: ./front.png
 ---
 # zippermau5, micromouse robot
 

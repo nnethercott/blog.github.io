@@ -4,7 +4,7 @@ title: golway72: a conway's game of life trinket
 desc: About a torus led matrix game of life plaything I threw together.
 tags: trinket gol led-matrix
 cats: hw gem
-img: /assets/golway72/display.avif
+img: ./display.avif
 ---
 # A Conway's Game of Life Demo
 

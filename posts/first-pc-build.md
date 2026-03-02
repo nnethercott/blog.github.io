@@ -4,7 +4,7 @@ title: building my first computer
 desc: I built my first computer.
 tags: hw
 cats: misc
-img: /assets/first-pc-build/case.avif
+img: ./case.avif
 ---
 # I built a computer
 I [built](https://youtu.be/YVjWz2rc13A) my first PC. It's pretty easy to do this, like lego with heavy metal parts and only a few combinations.

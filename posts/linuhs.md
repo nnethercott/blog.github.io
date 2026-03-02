@@ -4,7 +4,7 @@ title: linuhs: starting to follow lines
 desc: I made a line follower for a competition.
 tags: lfr robotics 3dp
 cats: rb
-img: /assets/linuhs/linuhs.avif
+img: ./linuhs.avif
 ---
 # Linuhs
 
