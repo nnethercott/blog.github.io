@@ -47,7 +47,7 @@ This version was tiny, smaller than the palm of my hand, **about 9cm on the long
 ![symmetrical new robot 3d model top](./cad-top.avif "The battery was to sit in the hollow, with the Pi ziptied on and camera attached, out front, on the claw")
 ![symmetrical new robot 3d model bottom](./cad-bottom.avif "You can see the caster mount made to be parallel against the floor, and where the motors fit in, with space for a driver board under the battery")
 
-Now, again, I didn't have many days, but for some reason, I wanted to do everything in a "complete" manner. Computer vision to detect the blocks. Position estimation for inverse kinematics. State machines and pathfinding. Calibration and precision with PID control and sensory input. Location representation, pretty much a fucking _ECS_.  "Real robotics".
+Now, again, I didn't have many days, but for some reason, I wanted to do everything in a "complete" manner. Computer vision to detect the blocks. Position estimation for inverse kinematics. State machines and pathfinding. Calibration and precision with PID control and sensory input. Location representation, pretty much a makeshift _ECS_.  "Real robotics".
 
 For whatever reason, I was convinced that doing it this way was... morally superior? Or, no, the only option. I shooed away any easier and faster plan and kept tryharding.
 

@@ -13,7 +13,7 @@ If you're reading this, my website is likely no longer a javascript SPA! But let
 
 ## Structure
 
-There's a sad `<head>` with the right `<meta>` tags to be anti-SEO and just enough plain CSS to look shitty even on mobile. A basic sans-serif font stack and <span style="color: dodgerblue">bright blue</span> links, four css classes for different fractions of `max-width`s that let me make rows of images.
+There's a sad `<head>` with the right `<meta>` tags to be anti-SEO and just enough plain CSS to look underwhelming, even when on mobile. A basic sans-serif font stack and <span style="color: dodgerblue">bright blue</span> links, four css classes for different fractions of `max-width`s that let me make rows of images.
 ```html
 <!DOCTYPE html>
 <html lang="en">
