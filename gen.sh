@@ -31,6 +31,7 @@ for md in $(
     post_slug="$(echo ${post_dir#public/posts/} | sed 's/[$"'"'"']//g')"
 
     # TOD: outline/schema/TOC-maker for select webpages and all feed elements
+    # TOD: webmentions
 
     metalines="$(awk '/^---$/ {if (s==0) {s=NR; next} else {e=NR; print s+1 "," e-1; exit}}' "$md")"
     colsep="[[:space:]]*:[[:space:]]*"
