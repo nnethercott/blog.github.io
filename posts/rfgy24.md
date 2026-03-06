@@ -74,15 +74,15 @@ Predictably, things didn't work out, because code like this doesn't "just happen
 
 On the finals day, things obviously are absolutely not working. I'm told I _have_ to go, along with the rest of my previously uninvolved team. So I go.
 
-My V2 robot's wired up all intricate, with the Pi and a DRV8833, camera and ToFs, everything attached and nothing functional. It's the morning and we've reached there, we've got maybe 20 minutes? I don't remember, I'm writing this post much later in retrospect (hindsight is NOT 20-20).
+My V2 robot's wired up all intricate, with the Pi and a DRV8833, camera and ToFs, everything attached and nothing functional. It's the morning and we've reached there, we've got maybe 20 minutes? I don't remember, I'm writing this post much later in retrospect and looking back it's still a bit fuzzy (hindsight is _not_ 20-20).
 
 I'd brought an Arduino Nano, a TB6612FNG and my soldering set with me. Decide I've got nothing to lose and rip out the Pi's connections, cold, while my iron warms, then stick the 328p in there with just power and the TB66 connected to it. I borrow glue and hide the Nano under the Pi, leaving the Pi connected to power and camera to make it look like it's still driving operations.
 
-Mind you, this is the smallest robot at the competition. So many of them are LEGO, something I've gotten used to seeing. I stop (with a thought about how they never win anyway) caring about the blatant violation of very explicit rules from the rulebook. Future-me looks at the Swiss finalists they're _all LEGO_. Internal agony.
+Mind you, this is the smallest robot at the competition. So many of them are LEGO, something I've gotten used to seeing. I stop (with a thought about how they never win anyway) caring about the blatant violation of very explicit rules (think "KITS not allowed" and "LEGO MINDSTORMS not allowed") from the rulebook. Future-me will look at the Swiss finalists and see _they're all LEGO_. Internal agony will ensue.
 
 Again, nothing I can do now. I borrow a laptop and program a quick fw, maybe three total lines of hurried code, to every two seconds change each of the two motor's speeds to separate random values individually.
 
-Great, I flash it onto the Nano with a dongle from an unexpected [figure](https://in.linkedin.com/in/pratapns "Interestingly, he made sure to tell me about the freedom he had found in baremetal mcu programming before he left us with his cable...").
+Great, I flash it onto the Nano with a dongle from an unexpected kindly [figure](https://in.linkedin.com/in/pratapns "Interestingly, he made sure to tell me about the freedom he had found in baremetal mcu programming before he left us with his cable and ISP...").
 
 My 9*4cm robot passes inspection.
 
@@ -110,9 +110,9 @@ I wasn't convinced. Scared, I panicked and changed it back to the random code. P
 
 I really remember how hard it hit on finals day. A blind robot with a path made well once would simply have had no room for error, even all exact block coordinates had already been given.
 
-But TL;DR: In short, I qualified with a half-functional prototype, saw the simple and perfectly valid solution, knew it was viable, chose a harder path, built a whole new robot, failed to complete it, prayed to PRNG, passed inspection, beat most teams with literal chaotic motion, and was good enough to reach semifinals despite everything exploding?
+But TL;DR: In short, I qualified with a half-functional prototype, saw the simple and perfectly valid solution, knew it was viable, chose a harder path, built a whole new robot, failed to complete it, prayed to PRNG, passed inspection, beat most teams with chaotic motion, and somehow reached semifinals.
 
-All that was just luck. I've been to dozens of competitions, and I hope to go a hundred more. But this one stings, like knowing the answer and still answering wrong.
+That's just luck. I've been to dozens of competitions, and I hope to go a hundred more. But this one stings, like knowing the answer and still answering wrong.
 
 <details><summary>Whelp!</summary>
 
