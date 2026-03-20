@@ -188,7 +188,7 @@ post_title="gen.sh"    \
 post_desc="static site generator" \
 post_tags_comma="generator, script, ssg" \
 post_content="$(printf '# gen.sh\n```sh\n%s\n```' "$(cat gen.sh)" | comrak --syntax-highlighting none)" \
-head_extension="<style>body { max-width: 100% }</style>" \
+head_extension="<style>body { max-width: 90% }</style>" \
 envsubst < template/index.html > public/gen.sh/index.html
 
 post_title="404 not found" \
