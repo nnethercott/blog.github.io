@@ -49,7 +49,7 @@ jobs:
         with:
           path: ./public
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: codeberg-tiny
     needs: build
     permissions:
       pages: write
