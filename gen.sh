@@ -5,9 +5,9 @@ basket_cat="https://c.pxhere.com/photos/d4/9d/cat_basket_feel_at_home_cozy_hidde
 command -v comrak >/dev/null || { echo "comrak required"; exit 1; }
 
 rm -rf public/
-mkdir -p public/
+mkdir -p public/posts
 cp -r include/* public/
-cp -r posts/ public/
+cp -r posts/ public/posts
 
 fix_xml() { echo "$1" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g; s/"/\&quot;/g; s/'"'"'/\&apos;/g'; }
 

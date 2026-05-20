@@ -1,11 +1,11 @@
 name: build and publish site
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: codeberg-small # amd64, 4G RAM, 2 cpu
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -55,5 +55,8 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: deploy to github pages
-        uses: actions/deploy-pages@v4
+      - name: deploy to codeberg pages
+        uses: https://codeberg.org/git-pages/action@v2
+        with:
+          site: "https://${{ forge.repository_owner }}.codeberg.page/blog/"
+          token: ${{ forge.token }}
